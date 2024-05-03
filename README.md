@@ -119,32 +119,40 @@ Login to DC-1 and install domain services from the service manager dashboard. On
 </p>
 
 <p>
-  
+  The First step to joining Client-1 to DC-1 is to change the dns setting of Client-1 to match the IP address of DC-1. Follow the images to navigate. Next, login into Client-1 with an admin account and navigate to system properties (right click windows button and go to system). Now find "Rename this PC" and click that. Now plug the domain you created (mydomain.com) into the text box. Confirm it by logging in with an admin account then restart your VM. To check the confirmation navigate to "Active Directory Users and Computers" and find the computers folder under the domain. Client 1 should show up just like the image above. 
 </p>
 
 <h3>Setting up Remote Desktop for Non-Administrative Users</h3>
 
 <p>
-<img src="AD-creating-accounts-script.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="AD- Remote Desktop 1.PNG"80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <p>
-<img src="AD-script-result.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="AD-Remote Desktop 2.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+  
+<p>
+To give access to non-admin users for remote desktop, navigate to the system properties and find "Select users that can remotely access this PC". Once on the menu add the group "Domain Users" to the text 
+box. We will confirm this in the next section.</p>
 
 
 <h3>Active Directory Activity</h3>
 
 <p>
-<img src="AD-creating-accounts-script.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="AD-Non admin login 1.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <p>
-<img src="AD-script-result.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="AD- Non Admin Login 2.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <p>
-  Open up PowerShell_ise as an administrator, paste the script in a new file and run the script. There should be a bunch of randomly generated accounts. You can use one of these accounts to login on the "Client-1" VM. 
+<img src="AD- Non admin user example.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+ Now that you set up remote desktop, create a user in the _EMPLOYEES folder you created inside "Active Directory Users and Computers". Once a user has been created log into client-1 with thier information. 
 </p>
 
 <br />
