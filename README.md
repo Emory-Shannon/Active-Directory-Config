@@ -40,7 +40,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="AD-Nic Static 3.PNG" height="80%" width="80%" alt="AD-Nic Static 3.PNG"/>
 </p>
 <p>
-Create two virtual machines, one called DC, and the other called "Client 1". When creating "DC-1" use windows server as the operating system. "Client 1 will be windows 10. Make sure they both are on the same subnet. After creating both, go to your "DC-1" VM and set the Network interface to be static. Do this by cliking on to the VM then going to network settings. Once your there click on the Network Interface then navigate to "IP Configurations", from there set the IP to static.
+Create two virtual machines, one called DC, and the other called "Client 1". When creating "DC-1" use windows server as the operating system. "Client 1" will be windows 10. Make sure they both are on the same subnet. After creating both, go to your "DC-1" VM and set the Network interface to be static. Do this by cliking on to the VM then going to network settings. Once your there click on the Network Interface then navigate to "IP Configurations", from there set the IP to static.
 </p>
 <br />
 
@@ -58,7 +58,7 @@ Create two virtual machines, one called DC, and the other called "Client 1". Whe
 <img src="AD- Connectivity 2.PNG" height="80%" width="80%" alt="AD- Connectivity 2.PNG"/>
 </p>
 <p>
-Login to Client-1 with remote desktop and ping DC-1's private IP address with ping -t (ip address). Login to the domain controller and enable ICMPv4 on the local windows firewall. Check back on client 1 to see if it worked.
+Login to "Client-1" with remote desktop and ping "DC-1's" private IP address with ping "-t (ip address)". Login to the domain controller and enable ICMPv4 on the local windows firewall. Check back on "client 1" to see if it worked.
 </p>
 <br />
 
@@ -75,7 +75,7 @@ Login to Client-1 with remote desktop and ping DC-1's private IP address with pi
 <p>
 <img src="AD- Domain Login.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-Login to DC-1 and install domain services from the service manager dashboard. Once installed, click the flag with the warning sign on the top right of the server manager. On this page set up a new forrest as "mydomain.com. Once you do this, restart your VM and log back in. 
+Login to "DC-1" and install domain services from the service manager dashboard. Once installed, click the flag with the warning sign on the top right of the server manager. On this page set up a new forrest as "mydomain.com". Once you do this, restart your VM and log back in. 
 <p>
 
 <h3>Post Installation setup</h3>
@@ -97,7 +97,7 @@ Login to DC-1 and install domain services from the service manager dashboard. On
 </p>
 
 <p>
-  In your DC-1 VM, open up "Active Directory Users and computers". Then Create two organizational Units named _ADMINS and _EMPLOYEES. Once that is done add an "admin" named Jane Doe to "_ADMINS". After adding Jane, access the properties tab by right cliking on the name. Navigate to "member of and add the role "Domain Admins" by typing it. Press apply and Jane is now an Admin.
+  In your "DC-1 VM", open up "Active Directory Users and computers". Then Create two organizational Units named _ADMINS and _EMPLOYEES. Once that is done add an "admin" named Jane Doe to _ADMINS. After adding Jane, access the properties tab by right cliking on the name. Navigate to "member of" and add the role "Domain Admins" by typing it. Press apply and Jane is now an Admin.
 </p>
 
 <h3>Joining "Client-1" to "DC-1"</h3>
